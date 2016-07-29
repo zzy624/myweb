@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog import views
+from books.views import table
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,4 +24,6 @@ urlpatterns = [
     url(r'^login/$', views.login),
     url(r'^login_action/$',views.login_action),
     url(r'^logout/$',views.logout),
+    url(r'^accounts/login/$', views.login),
+    url(r'^table/$', table),
 ]

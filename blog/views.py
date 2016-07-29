@@ -4,8 +4,10 @@ from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import RequestContext
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def index(request):
     blog_list = Blog.objects.all()
     # username = request.COOKIES.get('username','') #读取浏览器cookie
@@ -33,7 +35,7 @@ def login_action(request):
         return render_to_response('login.html',
                                   {'error':'username or password error!'},
                                   context_instance=RequestContext(request))
-
+@login_required
 def logout(request):
     response = HttpResponseRedirect('/login/') #返回登录页面
     # response.delete_cookie('username') #清理cookie里保存username
