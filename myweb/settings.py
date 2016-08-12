@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'books',
-    'bootstrap3'
+    'bootstrap3',
+    'polls'
 ]
 
 MIDDLEWARE_CLASSES = [
