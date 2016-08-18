@@ -1,3 +1,4 @@
+#-*-coding:utf-8-*-
 from blog.models import Blog
 from django.shortcuts import render_to_response
 from django.shortcuts import render

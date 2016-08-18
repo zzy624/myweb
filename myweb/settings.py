@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'books',
     'bootstrap3',
-    'polls'
+    'polls',
 ]
 
 MIDDLEWARE_CLASSES = [
